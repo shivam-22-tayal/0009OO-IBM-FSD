@@ -1,0 +1,41 @@
+<html>
+<head>
+   <title>Test</title>
+   <style>
+    table, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      align-content: center;
+    }
+    </style>
+<script src="GetData.js" type="text/javascript"></script>
+<script>
+    
+             const getData=()=>{
+                 window.location='form.html';
+             }
+
+            const loadData= ()=>{
+                const data = JSON.parse(localStorage.getItem('data'));
+               
+                let rows;
+            data.forEach(x=>{
+                rows +=`<tr><td>${x.name}</td><td>${x.category}</td></tr>`
+            });
+            const table =`<table> <tr><th>Name</th><th>category</th></tr> ${rows} </table>`; 
+            document.getElementById('content').innerHTML = table;   
+                     }
+    </script>
+ 
+ 
+</head>
+<body onload='loadData()'>
+   <h1>Table</h1>
+<div id='content'></div>
+     <br>
+    <button id="additem" onclick="getData()">Add Item</button>
+    <input type="button" value="Delete Data" onclick="deleteData()"/>
+    <br> <br>
+    
+</body>
+</html>

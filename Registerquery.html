@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>
+            Register | Jquery
+        </title>
+        <style>
+                #Register{
+                background-color: yellow (245,245,220,0.3);
+                width: 30%;
+                align-content: center;
+                border-radius: 2px;
+                padding: 5 5 5 5px;
+            }
+            input{
+                display: block;
+            }
+            .input{
+                border: 1px solid darkgray;
+                border-radius: 2px;
+                margin: 5 2 5 2px;
+                height: 4em;
+                width: 15em;
+            }
+            input[type=submit]{
+                width: 26em;
+                cursor: pointer;
+            }
+            input[type=submit]:hover{
+                background-color: blue;
+            }
+            .input-error{
+                border-color: red;
+            }
+            #error-message{
+                color: red;
+            }
+            
+            </style>
+        <script type="text/javascript" src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+        <script>
+        $(document).ready(()=>{
+
+            $('#on').click(()=>{
+            $('#off').show();
+            $('#on').hide();
+
+            $('#Register').show();
+        });
+        $('#off').click(()=>{
+            $('#off').hide();
+            $('#on').show();
+
+            $('#Register').hide();
+        });
+
+      /*  $('#animate').click(()=>{
+            $('#animate-content').animate({
+                fontSize: '24px',
+                opacity: 0.5
+            },1500);
+        });
+        $('#animate-off').click(()=>{
+            $('#animate-content').animate({
+                fontSize: "14px",
+                opacity: 1
+            },1000);
+        });
+    });*/
+
+    // register button
+    $('#register').click((event)=>{
+        console.log('register clicked');
+        let user = $('#name').val();
+        let pwd = $('#password').val();
+        let eml = $('#email').val();
+        let isValidEmail =(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/).test(eml);
+        console.log(isValidEmail);
+        $('#error-message').text('');
+        if(user == ""){
+           event.preventDefault();
+           console.log('if user running');
+            $('#name').focus();
+            $('#name').addClass('input-error');
+            $('#error-message').text('Username cannot be left blank');
+        }else if(pwd == ""){
+          
+           event.preventDefault();
+           console.log(' else if pass running');
+            $('#password').addClass('input-error');
+            $('#password').focus();
+           // $('#error-message').text('Password cannot be left blank');
+            $('#error-message').text('Password....');
+        }else if(eml == ""){
+       
+           event.preventDefault();
+           console.log('else if email running');
+            $('#email').addClass('input-error');
+            $('#email').focus();
+            $('#error-message').text('email cannot be left blank');
+        }else if (!isValidEmail)
+            {
+           event.preventDefault();
+            $('#email').addClass('input-error');
+            $('#email').focus();
+            $('#error-message').text(' InvalidEmail should contain @ before domain');
+        }
+    });
+});
+        
+        </script>
+    </head>
+    <header>
+        <h2>Register </h2>
+    </header>
+    <body>
+            <fieldset>
+                    <legend>Register</legend>
+                <input type="button" id='on' value='Register'/>
+                <input type="button" id='off' value='Cancel' style="display: none"/>
+         
+                
+                <div id='Register'>
+                        <div id='error-message'></div>
+                        
+                        <form action="Welcome.html" method="post">
+                                
+                           Name: <input type="text" id="name" placeholder="Name" class='input'/>
+                           Email: <input type="text" id="email" placeholder="Email" class="input"/>
+                           Password: <input type="password" id='password' placeholder="Password" class='input' value=""/>
+                            <input type="submit" id='register' value="Register"/>
+                    
+                        </form>
+                        
+                    </div>
+            </fieldset>
+        
+    </body>
+</html>

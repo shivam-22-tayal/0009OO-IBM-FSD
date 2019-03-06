@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <tittle>
+
+        </tittle>
+        <script src="GetData.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                
+                 function FormFunc() {
+  var x = document.getElementById("myForm");
+  var txt = "";
+  var i;
+  for (i = 0; i < x.length; i++) {
+    txt = txt + x.elements[i].value + "<br>";
+  }
+ // document.getElementById("id").innerHTML = txt;
+  document.getElementById("name").innerHTML = txt;
+  document.getElementById("category").innerHTML = txt;
+  document.getElementById("price").innerHTML = txt;
+  document.getElementById("quantity").innerHTML = txt;
+}
+                
+
+                </script>
+    </head>
+    <body>
+            <fieldset>
+                    <legend><b>Info</b></legend>
+                        NAME: <input type="text" name="yname" value="" id='yname' required><br>
+                        CATEGORY: 
+                        <select id="ycategory">
+                                <option value="select">---Select an Option---</option>
+                                <option value="Electronic">Electronic</option>
+                                <option value="Furnichure">Furnichure</option>
+                                <option value="Apparals">Apparals</option>
+                                <option value="Home & Kitchen">Home & Kitchen</option>
+                              </select>
+                          <br>
+                        PRICE: <input type="text" id="yprice" value=""><br>
+                        QUANTITY: <input type="number" id="yquantity" value=""><br>
+                        <button id="addform" onclick="saveData()">Submit</button>
+                    </fieldset>
+                    
+
+    </body>
+</html>

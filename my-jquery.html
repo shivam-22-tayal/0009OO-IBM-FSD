@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <tittle>Jquery</tittle>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js " type="text/javascript"></script>
+        <script type="text/javascript">
+        $(document).ready(()=>{
+            console.log("Hekko Jquery");
+
+        $("#btn1").click(()=>{
+            console.log("Button was clicked");
+            $("#message").val("Hello Hyy");
+        });
+        $("#content").html("<h1>Welcome to Jquery</h1>");
+        
+    });
+        </script>
+    </head>
+    <header>Welcome Jquery</header>
+    <body>
+        <div>
+            <input type="text" id="message"/>
+            <input type="button" value="Click me!!" id="btn1"/>
+        </div>
+        <div id="content">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <tittle>
+            Login Form
+        </tittle>
+        <script src="jquery3.js" type="text/javascript"></script>
+        <script type="text/javascript">
+      
+      $(document).ready(()=>{
+       $("#login").click((event)=>{
+           console.log("Submit clicked");
+              let user=$("#username").val();
+              let pwd=$("#password").val();
+              if(user ==''|| pwd==''){
+                console.log("yes i m if");
+                event.preventDefault();
+                 $("error").text("enter username");
+                 
+              }
+                 else{
+                    console.log("yes i m else");
+                    event.preventDefault();
+                 $("error").text("enter password");
+                 
+                 }
+              
+       });
+
+      });
+      </script>
+    </head>
+    <header>
+        Login
+    </header>
+    <body id="body">
+
+        <div id="login">
+            <div id="error"></div>
+          Username:  <input type="text" id="username"/> <br>
+          Passwod: <input type="password" id="password"/><br>
+          <input type="submit" value="Login" id="submit"/>
+        </div>
+    </body>
+</html>

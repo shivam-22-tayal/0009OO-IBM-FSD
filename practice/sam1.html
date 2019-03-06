@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Test2</title>
+        
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+            <meta name="description" content="">
+            <meta name="author" content="">
+              
+
+                <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>   
+<script type='text/javascript' src='Tquery2.js'></script>
+              
+    </head>
+    <body>
+       
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+ <h2>+</h2>
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title card card-header" id="pop">DL Register</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="cross">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div id='error-message'></div>
+            <form>
+                <div class="form-group">
+                   <label for="name">Name:</label>
+                   <input type="name" class="form-control form-control-lg" id="name" name="name" required>
+
+               </div>
+               <div class="form-group">
+                    <label for="add">Address:</label>
+                    <input type="text" class="form-control" id="add" name="add">
+                  </div>
+                <div class="form-group">
+                  <label for="email">Email address:</label>
+                  <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" name="pwd">
+                </div>
+                <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                  </label>
+                </div>
+                <!--<input type="submit" class="btn btn-success btn-block" id="submit" value="Submit">-->
+                <button type="button" class="btn btn-success btn-block" value="Submit" id="submit" data-dismiss="modal">Submit</button>
+              </form>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <div class="container " id="cont">
+     
+    </div>
+    <div class="container-fluid">
+          <div class="row">
+     <div class="col-sm-4" style="background-color:lavender;">
+
+            <h2 id="profile" class="offset-md-3">Your Profile</h2>
+     
+            <div class="card " style="width:400px" id="show">
+              <img class="card-img-top" src="shivam.jpg" alt="Card image" style="width:100%" id="img" >
+              <div class="card-body">
+               <ul class="list-group list-group-flush">
+                    <li class="lisy-group-item">Name:  <span id="name1"></span></li>
+                    <li class="lisy-group-item">Address:  <span id="add1"></span></li>
+                    <li class="lisy-group-item">Email:  <span id="mail1"></span></li>
+                    <li>DL NO. : <span id="dl"></span></li>
+               </ul>
+              </div>
+            </div>
+            </div>
+          <div class="col-sm-4" style="background-color:lavenderblush;">g</div>
+          <div class="col-sm-4" style="background-color:lavender;"></div>
+          <div class="col-sm-4" style="background-color:lavenderblush;">gv</div>
+        </div>
+      </div>
+
+    </body>
+</html>
